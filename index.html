@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Frequency Homepage</title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="Homepage.css">
-	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="icon"  href="images/icon.png" />
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+		<style style="text/css">
+div.slide-right {
+	width:100%;
+	overflow:hidden;
+}
+div.slide-right p {
+	padding-left:3%;
+	animation: 4s slide-right 1s both;
+	font-family: 'Lora', serif;
+}
+h3{
+	margin-left: 3%;
+	-webkit-animation: slide 2s ; /* Safari 4.0 - 8.0 */
+  animation: slide 2s ;
+	font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+}
+
+@-webkit-keyframes slide{
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+  100% {
+    transform: translateZ(100px) translateX(-70px);
+  }
+}
+
+@keyframes slide
+{0%
+	{-webkit-transform:scale(.5);transform:scale(.5)}
+	100%{
+		-webkit-transform:scale(1);transform:scale(1)}
+}
+
+@keyframes slide-right {
+	from {
+		margin-left: -100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+</style>
+
+		<title>Frequency club</title>
 	</head>
 	<body>
+
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">Frequency Club</a>
+					<a class="navbar-brand" href="index.html">
+          <img src="icon.png" alt="" width="35px" height="35px">
+        </a>
 		    </div>
 		    <ul class="nav navbar-nav">
 		      <li class="active">
@@ -26,29 +78,41 @@
 		    </ul>
 	 	 </div>
 	 	</nav>
-		 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
-	  	<script type="text/javascript">$(document).ready(function()
-		  {
-		  		$('.menu').click(function()
-		  	{
-		  		$('ul').toggleClass('active');
-
-		  	})
-		  })</script>
-  		<h1>About Us</h1>
-		<h3>Who are we?</h3>
-		<p>We are the to be engineers who are enthusiastic about creating real world projects according to industrial and societal requirements. We bridge problems with basic technologies to make our life easier</p>
-		<h3>What we do?</h3>
-		<p>We implement projects in the following domains: <br>Artificial Intelligence(AI),Machine Learning(ML),IoT,Image Processing, Automation and other state-of-the-art technologies. We also conduct introductory and advanced prototyping workshops by the industry for the students to get hands on experience in the above mentioned subjects <br>We conduct competitions and hackathons for the students to get some learning experience. <br>We do plan to attend techfests in various colleges</p>
-		<h3>Present Team</h3>
-		<p>Faculty Advisor-Prof. S Venkatesh(EIE Dept.)<br>President-Auchinto Chatterjee <br>Vice-President- Akash Kumar Ghanate <br>Core Team Members-10 <br>Active Second Years-30+ </p>
-		
-		<h6>THE TEAM:</h6>
-			<marquee scrolldelay='0' onmouseover="this.stop()" onmouseout="this.start()">		
+		<br>
+		<br>
+		<div>
+		<h3>the team</h3>
+			<marquee scrolldelay='0' onmouseover="this.stop()" onmouseout="this.start()">
 				<img src="images/homepageImg1.jpeg" width="500px">
 				<img src="images/homepageImg2.jpeg" width="500px">
 				<img src="images/homepageImg3.jpeg" width="500px">
 				<img src="images/homepageImg4.jpeg" width="500px">
-			<marquee>		
-	</body>	
-</html>
+			</marquee>
+			</div>
+
+		<h3>Who are we?</h3>
+		<p>We are the to be engineers who are enthusiastic about creating real world projects according to industrial and societal requirements. We bridge problems with basic technologies to make our life easier</p>
+		<h3>What we do?</h3>
+
+		<div >
+		<p class="animate">We implement projects in the following domains:</p>
+		<p>Artificial Intelligence(AI)
+		<p>Machine Learning(ML)
+		<p>IoT,Image Processing
+		<p>Automation
+		<p>other state-of-the-art technologies.
+		We also conduct introductory and advanced prototyping workshops by the industry for the students to get hands on experience in the above mentioned subjects <br>We conduct competitions and hackathons for the students to get some learning experience. <br>We do plan to attend techfests in various colleges</p>
+    </div>
+		<div class="slide-right">
+		<h3>Present Team</h3>
+		<br><br>
+		<p>Faculty Advisor-Prof. S Venkatesh(EIE Dept.)
+		<p>President-Auchinto Chatterjee
+		<p>Vice-President- Akash Kumar Ghanate
+		<p>Core Team Members-10
+		<p>Active Second Years-30+ </p>
+
+</div>
+
+
+	</body>
