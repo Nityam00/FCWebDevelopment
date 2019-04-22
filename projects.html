@@ -1,4 +1,18 @@
+
 <!DOCTYPE html>
+<html>
+<head>
+	<title>Projects</title>
+  <meta charset="utf-8">
+	<link rel="icon"  href="images/icon.png" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title>Projects</title>
@@ -9,6 +23,86 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	</head>
+
+	 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
+  	<script type="text/javascript">$(document).ready(function()
+	  {
+	  		$('.menu').click(function()
+	  	{
+	  		$('ul').toggleClass('active');
+	  	})
+	  })</script>
+
+	<style>
+	* {
+	  box-sizing:border-box;
+	}
+h2{
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+}
+	body {
+	  margin: 0;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.container {
+	  padding: 64px;
+		margin: 40px;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both
+	}
+
+	.column-66 {
+	  float: left;
+	  width: 66.66666%;
+	  padding: 20px;
+	}
+
+	.column-33 {
+	  float: left;
+	  width: 33.33333%;
+	  padding: 20px;
+	}
+
+	.large-font {
+	  font-size: 48px;
+	}
+
+	.xlarge-font {
+	  font-size: 64px
+	}
+
+	.button {
+	  border: none;
+	  color: white;
+	  padding: 14px 28px;
+	  font-size: 16px;
+	  cursor: pointer;
+	  background-color: #4CAF50;
+	}
+
+	img {
+	  display: block;
+	  height: auto;
+	  max-width: 100%;
+	}
+
+	@media screen and (max-width: 1000px) {
+	  .column-66,
+	  .column-33 {
+	    width: 100%;
+	    text-align: center;
+	  }
+	  img {
+	    margin: auto;
+	  }
+	}
+	</style>
 <body>
 	<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
@@ -26,23 +120,60 @@
 		    </ul>
 	 	 </div>
 	 </nav>
-	 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
-  	<script type="text/javascript">$(document).ready(function()
-	  {
-	  		$('.menu').click(function()
-	  	{
-	  		$('ul').toggleClass('active');
+<div style="text-align:center">
+  <h2>PROJECTS</h2>
+</div>
 
-	  	})
-	  })</script>
-  	<h3>Smart Village</h3>
-	<p>We, in the partnership with The Atr Of Living International worked on their initiative "SMART VILLAGE"to set up "Automated Hydroponic Fodder Units"at 26 locations in Karnataka.  </p>
-	<p>The main breakthroughs of this initiative were:</p>
-	<ul>
-		<li>Increased Fodder Generation</li>
-		<li>Increased Farming Incomes</li>
-		<li>Mitigating the Fodder crisis</li>
-	</ul>
-	<p>The project was built using MSP430 TI microcontroller considering the scalability and extendibility. As the inputs for the system were temperature and humidity. LM35 Temperature sensors and HIH 5030 humidity sensors were used. The output driven was a water pump and hence L298 driver IC was used to drive the motor.</p>
+<!--smart village -->
+<div class="container" style="	background-color:#FFD700">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Smart village</b></h1>
+	  <h1 class="large-font" style="color:MediumSeaGreen;"><b>In the partnership with The Art Of Living International</b></h1>
+      <p><span style="font-size:36px">to set up "Automated Hydroponic Fodder Units" at 26 locations in Karnataka.  </span> <p>The main breakthroughs of this initiative were:</p>
+			<ul>
+				<li>Increased Fodder Generation</li>
+				<li>Increased Farming Incomes</li>
+				<li>Mitigating the Fodder crisis</li>
+			</ul>
+			<p>The project was built using MSP430 TI microcontroller considering the scalability and extendibility. As the inputs for the system were temperature and humidity. LM35 Temperature sensors and HIH 5030 humidity sensors were used. The output driven was a water pump and hence L298 driver IC was used to drive the motor.</p>
+
+    <div class="column-33">
+        <img src="images/smartvillage_temp.jpeg" width="335" height="471">
+    </div>
+  </div>
+</div>
+
+<!-- -->
+<div class="container" style="	background-color:	#000080">
+  <div class="row">
+    <div class="column-33">
+      <img src="/w3images/app5.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Clarity</b></h1>
+      <h1 class="large-font" style="color:red;"><b>Pixels, who?</b></h1>
+      <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button class="button" style="background-color:red">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>The App</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button class="button">Download Application</button>
+    </div>
+    <div class="column-33">
+        <img src="/w3images/img_app.jpg" width="335" height="471" >
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
+  	</body>
