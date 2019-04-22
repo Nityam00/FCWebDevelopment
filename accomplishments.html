@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-	<title>Accomplishments</title>
-  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="Homepage.css">
-	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Accomplishments</title>
+  <link rel="icon"  href="images/icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
-	<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">Frequency Club</a>
-		    </div>
-		    <ul class="nav navbar-nav">
-		      <li class="active">
-		      <li><a href="index.html">Index</a></li>
-		      <li><a href="about.html">About</a></li>
-		      <li><a href="accomplishments.html">Accomplishments</a></li>
-		      <li><a href="contactUs.html">Contact Us</a></li>
-		      <li><a href="projects.html">Projects</a></li>
-		  	</li>
-		    </ul>
-	 	 </div>
-	 </nav>
-	 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
-  	<script type="text/javascript">$(document).ready(function()
-	  {
-	  		$('.menu').click(function()
-	  	{
-	  		$('ul').toggleClass('active');
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Frequency Club</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active">
+          <li><a href="index.html">Index</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="accomplishments.html">Accomplishments</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </li>
+        </ul>
+     </div>
+   </nav>
 
-	  	})
-	  })</script>
-  	<p><h3>Conducted  various workshops on:</h3><h2>Musical Signal Processing workshop</h2> A session of "Musical Signal Processing using LabView" was organised on 1st December,2011 in ollaboration with the Viortual Instrumentation Club. It gave an insight into one of the promising fields of application of Virtual Instrumentation.</p>
-	<p>The session was conducted by Mr.Govind(4th Year Instrumentation Technology Dept.) and Nikhil(4th Year Telecommunictation Engineering Dept.).The event had a guest performance on the veena by Mr.Jayasimhan, Asst.Professor Instrumentation Technology Dept. </p>
-	<p><h3>Seminar On Satellites and subsystems and overview for Dhruvsat program</h3>A seminar about "Various Satellites and Subsystems and an Overview for Dhruvsat program" was given by Prithvi Raj Narendra(RVCE Alumni,IISc)and Pooja(IISc) on 11th February 2012.</p>
-	<p><h3>Theory of Inventive Problem Solving-TRIZ Seminar</h3>A seminar on "Theory of Inventive Problem Solving-TRIZ" was conducted on 17th April,2012. Dr.N.S.Naerahari(Professor and Director, Placement Dept.)was the guest speaker. The session was very beneficial for students</p>
-	<p><h3>IGCV</h3>Intelligent Ground Vehicle Competition is held by Oakland University, Rochester,Michigan,U.S.A. in which many teams from different colleges across the world participate.IGV is developed upon the state-of-the-art-technologies of Artificial Intelligence,Machine Learning, Image Processing and Automation and is trained it through a random obstacle course by itself thus involving a auto Navigation based on the received inputs.</p>
-	<p><h3>HARDWARE PROTOTYPE</h3> We have designed a primitive prototype of the Intelligent Ground vehicle (IGV) having some basic features of the actual IGV which will be competing with other IGVs in the IGVC. Two development boars which are used in this prototype are Raspberry Pi 3 and Arduino Uno.Arduino microcontroller is used along with a motor driver shield for the DC Motors and Servo motors to control the drive mechanism parameters such as speed and stearing. This Arduino controller is in control of Raspberry Pi 3 using 12C communicatoion in Master-Slave configuration</p>
-	<p><h3>SOFTWARE SUBSYSTEM</h3>IMAGE PROCESSING MODULE <br>We are using OpenCV for Image Processing in Python scripts to implement lane direction. The USB-camera gives us a video feed and at the rate of 20fps we capture images and perform image operations of thresholding,segmentation and classification.</p>
-	<p><h3>SIMULATION</h3>A custom Simuation has been developed with specific self-designed virtual environment. The training and testing of the algorithms is being on a virtual platform  called Unity-3D and will be implemented into hardware model. For getting an intelligent program to make the IGV capable of autonomous driving,concepts of Deep Learning will be used for implementing a neural network which will be the model responsible for self driving nature of the IGV. However, instead of training and testing of this model onto the actual vehicle, this phase will be carried on a simulation,which will behave as a virtual environment in which the vehicle is to be tested.</p>
+<div class="container">
+  <div class="card-column column-0">
+    <div class="card card-color-0" value="p0" id="content">
+      <div class="border"></div>
+      <img src="images/icon.png" />
+      <h1>Musical Signal Processing workshop</h1>
+    </div>
+    <div class="card card-color-2" value="p2" id="content">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+      <h1>Seminar On Satellites and subsystems and overview for Dhruvsat program</h1>
+    </div>
+  </div>
+  <div class="card-column column-1">
+    <div class="card card-color-1" value="p1" id="content">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+      <h1>Theory of Inventive Problem Solving-TRIZ Seminar</h1>
+    </div>
+    <div class="card card-color-3" value="p3" id="content">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+      <h1>IGVC</h1>
+      <h3>Intelligent Ground Vehicle Competition is held by Oakland University, Rochester,Michigan,U.S.A.</h3>
+    </div>
+  </div>
+</div>
+
+<div id="cover" class="cover"></div>
+
+<div id="open-content" class="open-content">
+  <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+  <img id="open-content-image" src="" />
+  <div class="text" id="open-content-text">
+  </div>
+</div>
+
+    <script src="index.js"></script>
+
 </body>
 </html>
