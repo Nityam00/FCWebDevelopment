@@ -4,17 +4,17 @@
 	<title>About</title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="Homepage.css">
+	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">Frequency Club</a>
-		    </div>
-		    <ul class="nav navbar-nav">
+	<nav>
+		  <div class="toggle">
+		    <i class="fa fa-bars menu" aria-hidden="true"></i>
+		  </div>
+	 		<ul class="nav navbar-nav">
 		      <li class="active">
 		      <li><a href="index.html">Index</a></li>
 		      <li><a href="about.html">About</a></li>
@@ -23,8 +23,16 @@
 		      <li><a href="projects.html">Projects</a></li>
 		  	</li>
 		    </ul>
-	 	 </div>
 	 </nav>
+	 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
+  	<script type="text/javascript">$(document).ready(function()
+	  {
+	  		$('.menu').click(function()
+	  	{
+	  		$('ul').toggleClass('active');
+
+	  	})
+	  })</script>
   	<p><b>Faculty Advisor-</b>Prof. S Venkatesh(EIE Dept.)<br> <b>President-</b>Auchinto Chatterjee <br><b>Vice-President-</b> Akash Kumar Ghanate <br><b>Technical Head-</b>Makanai Ramakrishna<br><b>Technical Head-</b>Premal Singh <br><b>HR Head</b>Vaishnavie Sangam <br><b>Creative Works Head-</b>Pratyush Singh <br><b>Technical Coordinator-</b>Saksham Lakhera <br><b>Technical Co-ordinator-</b>Rohan Sanghvi</p>
 </body>
 </html>
