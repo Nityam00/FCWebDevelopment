@@ -1,179 +1,109 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Projects</title>
   <meta charset="utf-8">
-	<link rel="icon"  href="images/icon.png" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	</head>
-	<!DOCTYPE html>
-<html>
-<head>
-	<title>Projects</title>
-  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="Homepage.css">
-	  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	</head>
-
-	 <script>src="https://code.jquery.com/jquery-3.4.0.js"</script>
-  	<script type="text/javascript">$(document).ready(function()
-	  {
-	  		$('.menu').click(function()
-	  	{
-	  		$('ul').toggleClass('active');
-	  	})
-	  })</script>
-
-	<style>
-	* {
-	  box-sizing:border-box;
-	}
-h2{
-	font-family: 'Oswald', sans-serif;
-	font-size: 60px;
-}
-	body {
-	  margin: 0;
-	  font-family: Arial, Helvetica, sans-serif;
-	}
-
-	.container {
-	  padding: 64px;
-		margin: 40px;
-	}
-
-	.row:after {
-	  content: "";
-	  display: table;
-	  clear: both
-	}
-
-	.column-66 {
-	  float: left;
-	  width: 66.66666%;
-	  padding: 20px;
-	}
-
-	.column-33 {
-	  float: left;
-	  width: 33.33333%;
-	  padding: 20px;
-	}
-
-	.large-font {
-	  font-size: 48px;
-	}
-
-	.xlarge-font {
-	  font-size: 64px
-	}
-
-	.button {
-	  border: none;
-	  color: white;
-	  padding: 14px 28px;
-	  font-size: 16px;
-	  cursor: pointer;
-	  background-color: #4CAF50;
-	}
-
-	img {
-	  display: block;
-	  height: auto;
-	  max-width: 100%;
-	}
-
-	@media screen and (max-width: 1000px) {
-	  .column-66,
-	  .column-33 {
-	    width: 100%;
-	    text-align: center;
-	  }
-	  img {
-	    margin: auto;
-	  }
-	}
-	</style>
+	  <link rel="stylesheet" href="css/main.css">
+</head>
 <body>
-	<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">Frequency Club</a>
-		    </div>
-		    <ul class="nav navbar-nav">
-		      <li class="active">
-		      <li><a href="index.html">Index</a></li>
-		      <li><a href="about.html">About</a></li>
-		      <li><a href="accomplishments.html">Accomplishments</a></li>
-		      <li><a href="contactUs.html">Contact Us</a></li>
-		      <li><a href="projects.html">Projects</a></li>
-		  	</li>
-		    </ul>
-	 	 </div>
-	 </nav>
-<div style="text-align:center">
-  <h2>PROJECTS</h2>
-</div>
 
-<!--smart village -->
-<div class="container" style="	background-color:#FFD700">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>Smart village</b></h1>
-	  <h1 class="large-font" style="color:MediumSeaGreen;"><b>In the partnership with The Art Of Living International</b></h1>
-      <p><span style="font-size:36px">to set up "Automated Hydroponic Fodder Units" at 26 locations in Karnataka.  </span> <p>The main breakthroughs of this initiative were:</p>
-			<ul>
-				<li>Increased Fodder Generation</li>
-				<li>Increased Farming Incomes</li>
-				<li>Mitigating the Fodder crisis</li>
-			</ul>
-			<p>The project was built using MSP430 TI microcontroller considering the scalability and extendibility. As the inputs for the system were temperature and humidity. LM35 Temperature sensors and HIH 5030 humidity sensors were used. The output driven was a water pump and hence L298 driver IC was used to drive the motor.</p>
+        <script type = "text/javascript">
+        var myVar;
 
-    <div class="column-33">
-        <img src="images/smartvillage_temp.jpeg" width="335" height="471">
-    </div>
-  </div>
-</div>
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        function myFunction_1() {
+        //alert("Slide changed");
+          myVar = setTimeout(carousel, 5000);
+        }
+        function carousel()
+        {
+        //alert("Slide to be changed");
+            carouselUpdate(1);
+        }
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("intro").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+          myFunction_1();
+        }
+        
+    function currentSlide()
+    {
+        var i;
+        for(i=1;i==1;i++)
+        {
+            if(document.getElementById("slide_"+i).checked)
+            {
+                return i;
+            }
+        }
+    }
+    function carouselUpdate(dir)
+    {
+        var slideno = currentSlide();
+        
+        //alert('event has been triggered ' + slideno + ' ' + dir);
+        if (dir == -1)
+        {
+            document.getElementById("slide_"+slideno).checked = false;
+            slideno = slideno - 1;
+            if(slideno == 0) slideno = 1;
+            document.getElementById("slide_"+slideno).checked = true;
+        }
+        else
+        {
+            document.getElementById("slide_"+slideno).checked = false;
+            slideno = slideno + 1;
+            if(slideno == 2) slideno = 1;
+            document.getElementById("slide_"+slideno).checked = true;
+            //alert("Slide to be changed");
+        }
+        //alert("Slide to be changed");
+        myFunction_1();
+    }
+</script>
+    </head>
+    <body  onload="myFunction()">
+        <div class = "intro" id="intro" style = "width:100%;text-align:center;">
+            <h1>Our Best Projects are Loading</h1>
+        </div>
+        <div class = "loader" id="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+            <!--<h2>Tada!</h2>
+            <p>Some text in my newly loaded page..</p>-->
+            <header>
+            <div class = "container">
+                    <div class = "prev_but"><span  onclick = "carouselUpdate(-1)"></span></div>
+                    <div class = "next_but"><span  onclick = "carouselUpdate(1)"></span></div>
+                    <ul class = "carousel">
+                        <li>
+                            <input id = "slide_1" type = "radio" checked = "checked" name = "slide">
+                                <div class = "slide">
 
-<!-- -->
-<div class="container" style="	background-color:	#000080">
-  <div class="row">
-    <div class="column-33">
-      <img src="/w3images/app5.jpg" alt="App" width="335" height="471">
-    </div>
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>Clarity</b></h1>
-      <h1 class="large-font" style="color:red;"><b>Pixels, who?</b></h1>
-      <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <button class="button" style="background-color:red">Read More</button>
-    </div>
-  </div>
-</div>
-
-<!-- The App Section -->
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>The App</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
-      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <button class="button">Download Application</button>
-    </div>
-    <div class="column-33">
-        <img src="/w3images/img_app.jpg" width="335" height="471" >
-    </div>
-  </div>
-</div>
-
-</body>
+                                    <div class = "content2">
+                                        <h2>Smart Village</h2>
+                                        <p>We, in the partnership with The Atr Of Living International worked on their initiative "SMART VILLAGE"to set up "Automated Hydroponic Fodder Units"at 26 locations in Karnataka.</p>
+										<p>The main breakthroughs of this initiative were:</p>
+										<ul>
+											<li>Increased Fodder Generation</li>
+											<li>Increased Farming Incomes</li>
+											<li>Mitigating the Fodder crisis</li>
+										</ul>
+										<p>The project was built using MSP430 TI microcontroller considering the scalability and extendibility. As the inputs for the system were temperature and humidity. LM35 Temperature sensors and HIH 5030 humidity sensors were used. The output driven was a water pump and hence L298 driver IC was used to drive the motor.</p>
+                                      </div><div class = "bg_image"></div>
+                                </div>
+                        </li>    
+                    </ul>
+            </div>
+                
+        </header>
+	</body>
 </html>
-  	</body>
