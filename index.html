@@ -1,118 +1,404 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon"  href="images/icon.png" />
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-		<style style="text/css">
-div.slide-right {
-	width:100%;
-	overflow:hidden;
+
+ <!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+        <title>Frequency Club</title>
+        <link rel = "icon" type = "image/png" href = "img/LOGO_Black.png">
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/main.css" rel = "stylesheet" type = "text/css" />
+
+        <script type = "text/javascript">
+        var myVar;
+
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        function myFunction_1() {
+        //alert("Slide changed");
+          myVar = setTimeout(carousel, 5000);
+        }
+        function carousel()
+        {
+        //alert("Slide to be changed");
+            carouselUpdate(1);
+        }
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("intro").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+          myFunction_1();
+        }
+        
+    function currentSlide()
+    {
+        var i;
+        for(i=1;i<=5;i++)
+        {
+            if(document.getElementById("slide_"+i).checked)
+            {
+                return i;
+            }
+        }
+    }
+    function carouselUpdate(dir)
+    {
+        var slideno = currentSlide();
+        
+        //alert('event has been triggered ' + slideno + ' ' + dir);
+        if (dir == -1)
+        {
+            document.getElementById("slide_"+slideno).checked = false;
+            slideno = slideno - 1;
+            if(slideno == 0) slideno = 5;
+            document.getElementById("slide_"+slideno).checked = true;
+        }
+        else
+        {
+            document.getElementById("slide_"+slideno).checked = false;
+            slideno = slideno + 1;
+            if(slideno == 6) slideno = 1;
+            document.getElementById("slide_"+slideno).checked = true;
+            //alert("Slide to be changed");
+        }
+        //alert("Slide to be changed");
+        myFunction_1();
+    }
+</script>
+    </head>
+    <body  onload="myFunction()">
+        <div class = "intro" id="intro" style = "width:100%;text-align:center;">
+            <h1>Welcome to Frequency Club</h1>
+        </div>
+        <div class = "loader" id="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+            <!--<h2>Tada!</h2>
+            <p>Some text in my newly loaded page..</p>-->
+            <header>
+            <div class = "container">
+                    <div class = "prev_but"><span  onclick = "carouselUpdate(-1)"></span></div>
+                    <div class = "next_but"><span  onclick = "carouselUpdate(1)"></span></div>
+                    <ul class = "carousel">
+                        <li>
+                            <input id = "slide_1" type = "radio" checked = "checked" name = "slide">
+                                <div class = "slide">
+
+                                    <div class = "content">
+                                        <h2>Our Vision</h2>
+                                        <p>Establish a platform where the curious students can bring their imaginations to life using state-of-the-art concepts delivered to them at their ease</p>
+                                    </div><div class = "bg_image"></div>
+                                </div>
+                            
+                        </li> 
+                        <li>
+                            <input id = "slide_2" type = "radio" name = "slide">
+                                <div class = "slide">
+                                    <div class = "content">
+                                        <h2>Industry in context</h2>
+                                        <p>Organising workshops and seminars addressed by excellent industry experts to deliver vast span of knowledge in short timeframes to prepare the students.</p>
+                                    </div>
+                                    <div class = "bg_image"></div>
+                                </div>
+                            </input>
+                        </li>
+                        <li>
+                            <input id = "slide_3" type = "radio" name = "slide">
+                                <div class = "slide">
+                                    <div class = "content">
+                                        <h2>Tools : Signature of Smart</h2>
+                                        <p>Progress in state-of-the-art domains of Artificial Intelligence, Machine Learning, IoT and Automation, Robotics and various other modular fields of research.</p>
+                                    </div><div class = "bg_image"></div>
+                                </div>
+                            </input>
+                        </li>
+                        <li>
+                            <input id = "slide_4" type = "radio" name = "slide">
+                                <div class = "slide">
+                                    <div class = "content">
+                                        <h2>Outcome Prolonged</h2>
+                                        <p>Teaching sessions conducted by senior members of the club in the mentioned domains and doing industry based domain specific projects to prolonge the learnings.</p>
+                                    </div><div class = "bg_image"></div>
+                                </div>
+                            </input>
+                        </li>
+                        <li>
+                            <input id = "slide_5" type = "radio" name = "slide">
+                                <div class = "slide">
+                                    <div class = "content">
+                                        <h2>At your Service</h2>
+                                        <p>For the exploratory enthusiasts in campus, we are always at your service to provide a platform to learn and share their knowledge and ideas for enhanced outcomes.</p>
+                                    </div><div class = "bg_image"></div>
+                                </div>
+                            </input>
+                        </li>
+                    </ul>
+                </div>
+                
+            </header>
+            <nav>
+                <div class = "title"><a href="index.html"><img src = "img/LOGO_Black.png" style="width:60px;height:60px"><h2><div class="zilla">FREQUENCY</div> <div class="investo">CLUB</div></h2></a></div>
+                <ul>
+                    
+                    <li><a href = "#home">Home</a></li>
+                    <li><a href = "#about">About Us</a></li>
+                    <li><a href = "accomplishments.html">Accomplishment</a></li>
+                    <li><a href = "projects.html">Projects</a></li>
+                    <li><a href = "#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <section class = "sec1" id = "home">
+                <div class = "home_layer_1">
+                    <div class = "home_content">
+                        <h2>A Step Closer...</h2>
+                        <p>We are the to be engineers who are enthusiastic about creating real world projects according to industrial and societal requirements. We bridge problems with basic technologies to make our life easier.</p>
+                        <p>We implement projects in the following domains:<br>
+                        Artificial Intelligence(AI), Machine Learning(ML), IoT, Image Processing, Automation and other state-of-the-art technologies. We also conduct introductory and advanced prototyping workshops by the industry for the students to get hands on experience in the above mentioned subjects.</p>
+                        <p>
+                        We conduct competitions and hackathons for the students to get some learning experience. We do plan to attend techfests in various colleges.</p>
+                    </div>
+                </div>
+                
+            </section>
+            <section class = "sec2" id = "about">
+                <div class = "about">
+                    <div class = "body">
+                        <h2>Our Team</h2>
+                        <p>Presenting the team behind the growing staure of the club and the ever-increasing community of ours sharing similar ideology.</p>
+                        <br><br><br>
+                            <p><b>Faculty Advisor-</b>Prof. S Venkatesh(EIE Dept.)<br> <b>President-</b>Auchinto Chatterjee <br><b>Vice-President-</b> Akash Kumar Ghanate <br><b>Technical Head-</b>Makanai Ramakrishna<br><b>Technical Head-</b>Premal Singh <br><b>HR Head</b>Vaishnavie Sangam <br><b>Creative Works Head-</b>Pratyush Singh <br><b>Technical Coordinator-</b>Saksham Lakhera <br><b>Technical Co-ordinator-</b>Rohan Sanghvi</p>
+
+                    </div>
+                    <div class="card_label_b"><p>Advisory Board</p></div>
+                    <div class = "card_2">
+                    <div class = "char"><img src = "img/advisory.jpg" style="width:100%;height:100%;"></div>
+                    <div class = "content">
+                        <p>Led by<br><br><span style="font-weight:bold;font-size:20px;">Mr. Auchinto Chatterjee</span><br>and<br><span style="font-weight:bold;font-size:20px;">Mr. Premal Singh</span></p>
+                        <p><a href="about.html#advisory" class="link">Read more</a></p>
+                    </div>
+                    </div>
+                    <div class="card_label_a"><p>Present Team</p></div>
+                    <div class = "card_1">
+                    <div class = "char"><img src = "img/curr_team.jpg" style="width:100%;height:100%;"></div>
+                    <div class = "content">
+                        <p>Led by<br><br><span style="font-weight:bold;font-size:20px;">Mr. Ruthwik SJ</span><br>and<br><span style="font-weight:bold;font-size:20px;">Mr. Manvendra Sinh Chhajerh</span></p>
+                        <p><a href="about.html#current" class="link">Read more</a></p>
+                    </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class = "sec3" id = "contact">
+                <div class = "sg_layer">
+                    <div class = "sg_con_bg">
+                        <div class = "sg_content">
+                        
+                        <h2>Member Workspace</h2>
+                        <br>
+                        <p>Frequency Club welcomes it's members to step into a specifically designed space to plan, deliberate and innovate along with the ever-increasing Frequency Community.</p>
+
+                        <br>
+                        </div>
+                        <div class = "panel">
+                            <!--img src = "img/Analyst_FG.jpg" style = "width:250px;height:100%;"-->
+                            <button class="specific" onclick="document.getElementById('id01').style.display='block'" style="width:auto;transform:translate(-50%,-50%);position:absolute;top:40%;left:77%;">Login</button>
+                            <button class="specific" onclick="document.getElementById('id02').style.display='block'" style="width:auto;transform:translate(-50%,-50%);position:absolute;top:60%;left:77%;">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="sec4">
+                <div class="body">
+                    <div id="googleMap" style="width:100%;height:400px;"></div>
+                    <!--div class="map-wrap" style="padding-top:10px;padding-left:10px;width:100%; height: 100%; background:url(img/map.jpg);background-size:100% 100%;" id="map"></div-->
+                    <div style="padding-top:50px;padding-left:15px;">
+                        <div style="display:flex;">
+                            <div class="icon">
+                            <img src="img/add.jpg" style="width:40px; height:40px; color:#7c32ff">
+                                <!--span style="background:url(img/add.jpg);background-size:40px 40px;color:#ff0000"></span-->
+                            </div>
+                            <div class="contact-details">
+                                <h5>Frequency Club</h5>
+                                <p>
+                                    RV College of Engineering<br>
+                                    Mysuru Road, Bengaluru - 560059
+                                </p>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+                            <div class="icon">
+                            <img src="img/call.png" style="width:40px; height:40px;">
+                                <!--span class="lnr lnr-phone-handset"></span-->
+                            </div>
+                            <div class="contact-details">
+                                <h5>+91 - 88928 65788<br>+91 - 89499 11655</h5>
+                            </div>
+                        </div>
+                        <div style="display:flex;">
+                            <div class="icon">
+                            <img src="img/mail.jpg" style="width:40px; height:40px;">
+                                <!--span class="lnr lnr-envelope"></span-->
+                            </div>
+                            <div class="contact-details">
+                                <h5>frequencyclub@rvce.edu.in</h5>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+                            <div class="row">
+                                <div class="col-lg-6 form-group">
+                                    <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+                                     class="inp" required="" type="text">
+
+                                    <input name="email" class="inp" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                                     onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'"
+                                     required="" type="email">
+
+                                    <input name="subject"class="inp" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'"
+                                     required="" type="text">
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <textarea class="common-textarea" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''"
+                                     onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="alert-msg" style="text-align: left;"></div>
+                                    <button class="specific" style="float: right;">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section class = "footer">
+                <div class="part_a">
+                <h2>Top Projects</h2>
+                <p><a href="projects.html#agv" class="link_1">Autonomous Vehicle</a></p>
+                <p><a href="projects.html#autowshop" class="link_1">Workshop Automation</a></p>
+                <p><a href="projects.html#ariot" class="link_1">AR into IOT</a></p>
+                </div>
+                <div class="part_b">
+                <h2>Quick Links</h2>
+                <p><a href="faq.html" class="link_1">Frequently Asked Questions</a></p>
+                <p><a href="recruitment.html#current" class="link_1">Recruitment Drive</a></p>
+                <p><a href="about.html#operation" class="link_1">Operation</a></p>
+                </div>
+                <div class="part_c">
+                <h2>Resources</h2>
+                <p><a href="projects.html#guide" class="link_1">Project Guides</a></p>
+                <p><a href="expert.html" class="link_1">Experts</a></p>
+                <p><a href="research.html" class="link_1">Research</a></p>
+                <p><a href="sponsor.html" class="link_1">Benefactors</a></p>
+                </div>
+            </section>
+            <div id="pal_sect">
+            <ul class = "palette">
+                <li><a href = "#carbassist"><img src="img/notifications.png" style="width:40px;height:40px;"></a></li>
+
+            </ul>
+        </div>
+        </div>
+        
+        <div id="id01" class="modal">
+  
+          <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container" style="display:block;width:450px;height:250px;">
+              <label for="uname"><b>Username</b></label>
+              <input class="inp" type="text" placeholder="Enter Username" name="uname" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input class="inp" type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button class="specific" type="submit">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+            
+            <div class="container" style="position:relative;top:45%;width:450px;height:100px;background-color:#f1f1f1;">
+            <hr>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+
+        <div id="id02" class="modal">
+          
+          <form class="modal-content" action="/action_page.php">
+          
+            <div class="container" style="display:block;width:450px;height:600px;">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input class="inp" type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input class="inp" type="password" placeholder="Enter Password" name="psw" required>
+
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input class="inp" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+              <div class="clearfix">
+                <button type="submit" class="specific">Sign Up</button>
+                <button type="button" style="float:right" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                
+              </div>
+            </div>
+          </form>
+        </div>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(12.923778, 77.501133),
+  zoom:15,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        
+var marker = new google.maps.Marker({
+          position: {lat: 12.923778, lng: 77.501133},
+          map: map,
+          title: 'Frequency Club'
+        });
 }
-div.slide-right p {
-	padding-left:3%;
-	animation: 4s slide-right 1s both;
-	font-family: 'Lora', serif;
-}
-h3{
-	margin-left: 3%;
-	-webkit-animation: slide 2s ; /* Safari 4.0 - 8.0 */
-  animation: slide 2s ;
-	font-family: 'Oswald', sans-serif;
- text-transform: uppercase;
-}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA86ku1YwIe4CtpiofpHItn8fE40MNCKOs&callback=myMap"></script>
 
-@-webkit-keyframes slide{
-  0% {
-    transform: translateZ(0) translateX(0);
-  }
-  100% {
-    transform: translateZ(100px) translateX(-70px);
-  }
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal_1 = document.getElementById('id02');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if ((event.target == modal)||(event.target == modal_1)) {
+        modal.style.display = "none";
+        modal_1.style.display = "none";
+    }
 }
 
-@keyframes slide
-{0%
-	{-webkit-transform:scale(.5);transform:scale(.5)}
-	100%{
-		-webkit-transform:scale(1);transform:scale(1)}
-}
+</script>
 
-@keyframes slide-right {
-	from {
-		margin-left: -100%;
-		width: 300%;
-	}
-
-	to {
-		margin-left: 0%;
-		width: 100%;
-	}
-}
-</style>
-
-		<title>Frequency club</title>
-	</head>
-	<body>
-
-		<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-					<a class="navbar-brand" href="index.html">
-          <img src="icon.png" alt="" width="35px" height="35px">
-        </a>
-		    </div>
-		    <ul class="nav navbar-nav">
-		      <li class="active">
-		      <li><a href="index.html">Index</a></li>
-		      <li><a href="about.html">About</a></li>
-		      <li><a href="accomplishments.html">Accomplishments</a></li>
-		      <li><a href="contactUs.html">Contact Us</a></li>
-		      <li><a href="projects.html">Projects</a></li>
-		    </li>
-		    </ul>
-	 	 </div>
-	 	</nav>
-		<br>
-		<br>
-		<div>
-		<h3>the team</h3>
-			<marquee scrolldelay='0' onmouseover="this.stop()" onmouseout="this.start()">
-				<img src="images/homepageImg1.jpeg" width="500px">
-				<img src="images/homepageImg2.jpeg" width="500px">
-				<img src="images/homepageImg3.jpeg" width="500px">
-				<img src="images/homepageImg4.jpeg" width="500px">
-			</marquee>
-			</div>
-
-		<h3>Who are we?</h3>
-		<p>We are the to be engineers who are enthusiastic about creating real world projects according to industrial and societal requirements. We bridge problems with basic technologies to make our life easier</p>
-		<h3>What we do?</h3>
-
-		<div >
-		<p class="animate">We implement projects in the following domains:</p>
-		<p>Artificial Intelligence(AI)
-		<p>Machine Learning(ML)
-		<p>IoT,Image Processing
-		<p>Automation
-		<p>other state-of-the-art technologies.
-		We also conduct introductory and advanced prototyping workshops by the industry for the students to get hands on experience in the above mentioned subjects <br>We conduct competitions and hackathons for the students to get some learning experience. <br>We do plan to attend techfests in various colleges</p>
-    </div>
-		<div class="slide-right">
-		<h3>Present Team</h3>
-		<br><br>
-		<p>Faculty Advisor-Prof. S Venkatesh(EIE Dept.)
-		<p>President-Auchinto Chatterjee
-		<p>Vice-President- Akash Kumar Ghanate
-		<p>Core Team Members-10
-		<p>Active Second Years-30+ </p>
-
-</div>
-
-
-	</body>
+    </body>
+    </html>
