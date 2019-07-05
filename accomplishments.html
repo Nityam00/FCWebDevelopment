@@ -29,7 +29,7 @@
           document.getElementById("myDiv").style.display = "block";
           myFunction_1();
         }
-        
+
     function currentSlide()
     {
         var i;
@@ -44,7 +44,7 @@
     function carouselUpdate(dir)
     {
         var slideno = currentSlide();
-        
+
         //alert('event has been triggered ' + slideno + ' ' + dir);
         if (dir == -1)
         {
@@ -83,7 +83,7 @@
             <div class = "container">
                     <div class = "prev_but"><span  onclick = "carouselUpdate(-1)"></span></div>
                     <div class = "next_but"><span  onclick = "carouselUpdate(1)"></span></div>
-                    <ul class = "carousel">
+                    <ul class = "carousel1">
                         <li>
                             <input id = "slide_1" type = "radio" checked = "checked" name = "slide">
                                 <div class = "slide">
@@ -93,8 +93,8 @@
                                         <p>A session of "Musical Signal Processing using LabView" was organised on 1st December,2011 in ollaboration with the Viortual Instrumentation Club. It gave an insight into one of the promising fields of application of Virtual Instrumentation.</p><p>The session was conducted by Mr.Govind(4th Year Instrumentation Technology Dept.) and Nikhil(4th Year Telecommunictation Engineering Dept.).The event had a guest performance on the veena by Mr.Jayasimhan, Asst.Professor Instrumentation Technology Dept.</p>
                                     </div><div class = "bg_image"></div>
                                 </div>
-                            
-                        </li> 
+
+                        </li>
                         <li>
                             <input id = "slide_2" type = "radio" name = "slide">
                                 <div class = "slide">
@@ -157,7 +157,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
             </header>
 </body>
 </html>
